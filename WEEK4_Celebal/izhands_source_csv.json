@@ -1,0 +1,24 @@
+{
+    "name": "izhands_source_csv",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "izhan_BlobStorage",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "fileName": "Sample - Superstore.csv",
+                "container": "input"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": []
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
