@@ -1,0 +1,105 @@
+
+WITH cust_ltv AS (
+    SELECT
+        c.customer_id,
+        c.first_name || ' ' || c.last_name AS customer_name,
+        SUM(oi.quantity * oi.unit_price) AS lifetime_value,
+        COUNT(DISTINCT o.order_id) AS order_count
+    FROM customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    JOIN order_items oi ON o.order_id = oi.order_id
+    WHERE o.status IN ('completed', 'shipped')
+    GROUP BY c.customer_id
+)
+SELECT
+    customer_id,
+    customer_name,
+    ROUND(lifetime_value, 2) AS lifetime_value,
+    order_count,
+    RANK() OVER (ORDER BY lifetime_value DESC) AS ltv_rank,
+    DENSE_RANK() OVER (ORDER BY lifetime_value DESC) AS ltv_dense_rank
+FROM cust_ltv
+ORDER BY ltv_rank
+LIMIT 40;
+
+
+WITH monthly AS (
+    SELECT
+        strftime('%Y-%m', o.order_date) AS month,
+        SUM(oi.quantity * oi.unit_price) AS revenue
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    WHERE o.status IN ('completed', 'shipped')
+    GROUP BY 1
+)
+SELECT
+    month,
+    ROUND(revenue, 2) AS revenue,
+    ROUND(SUM(revenue) OVER (ORDER BY month), 2) AS running_total,
+    ROUND(AVG(revenue) OVER (
+        ORDER BY month
+        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+    ), 2) AS moving_avg_3m,
+    ROUND(
+        (revenue - LAG(revenue) OVER (ORDER BY month))
+        / NULLIF(LAG(revenue) OVER (ORDER BY month), 0) * 100,
+        1
+    ) AS mom_growth_pct
+FROM monthly
+ORDER BY month;
+
+-- 3. Product rank within category
+WITH prod_rev AS (
+    SELECT
+        p.product_id,
+        p.product_name,
+        p.category,
+        SUM(oi.quantity * oi.unit_price) AS revenue,
+        SUM(oi.quantity) AS units
+    FROM order_items oi
+    JOIN products p ON oi.product_id = p.product_id
+    JOIN orders o   ON oi.order_id = o.order_id
+    WHERE o.status IN ('completed', 'shipped')
+    GROUP BY p.product_id
+)
+SELECT
+    product_id,
+    product_name,
+    category,
+    units,
+    ROUND(revenue, 2) AS revenue,
+    RANK() OVER (PARTITION BY category ORDER BY revenue DESC) AS rank_in_category
+FROM prod_rev
+ORDER BY category, rank_in_category
+LIMIT 50;
+
+WITH monthly AS (
+    SELECT
+        strftime('%Y-%m', o.order_date) AS month,
+        SUM(oi.quantity * oi.unit_price) AS revenue
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    WHERE o.status IN ('completed', 'shipped')
+    GROUP BY 1
+),
+with_growth AS (
+    SELECT
+        month,
+        revenue,
+        LAG(revenue) OVER (ORDER BY month) AS prev_revenue,
+        (revenue - LAG(revenue) OVER (ORDER BY month))
+            / NULLIF(LAG(revenue) OVER (ORDER BY month), 0) * 100 AS growth_pct
+    FROM monthly
+)
+SELECT
+    month,
+    ROUND(revenue, 2) AS revenue,
+    ROUND(prev_revenue, 2) AS prev_revenue,
+    ROUND(growth_pct, 1) AS growth_pct,
+    CASE
+        WHEN growth_pct > 5 THEN 'high growth'
+        WHEN growth_pct < -5 THEN 'decline'
+        ELSE 'stable'
+    END AS trend_flag
+FROM with_growth
+ORDER BY month;
