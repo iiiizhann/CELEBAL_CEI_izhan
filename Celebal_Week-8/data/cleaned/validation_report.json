@@ -1,0 +1,27 @@
+{
+  "orders": {
+    "total_rows": 600,
+    "missing_customer_id_fixed": 31,
+    "invalid_dates_normalised": 90
+  },
+  "products": {
+    "total_rows": 112,
+    "product_name_issues_fixed": 18
+  },
+  "customers": {
+    "total_rows": 560,
+    "invalid_emails": 5,
+    "invalid_email_customer_ids": [
+      "68",
+      "152",
+      "174",
+      "463",
+      "498"
+    ]
+  },
+  "order_items": {
+    "total_rows": 1200,
+    "negative_quantities": 33,
+    "orphan_items_removed": 0
+  }
+}

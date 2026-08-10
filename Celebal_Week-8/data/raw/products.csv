@@ -1,0 +1,113 @@
+product_id,product_name,category,subcategory,cost_price
+1,TV Look,Electronics,TV,183.13
+2,TV Wonder,Electronics,TV,55.11
+3,TV International,Electronics,TV,98.96
+4,TV Paper,Electronics,TV,150.58
+5,TV Above,Electronics,TV,27.46
+6,TV Every,Electronics,TV,32.45
+7,TV Continue,Electronics,TV,172.73
+8,Mobile Investment,Electronics,Mobile,196.09
+9,Mobile Move,Electronics,Mobile,161.89
+10,Mobile Both,Electronics,Mobile,159.18
+11,  MOBILE OPERATION  ,Electronics,Mobile,109.63
+12,Mobile Baby,Electronics,Mobile,136.2
+13,Mobile Most,Electronics,Mobile,118.99
+14,Mobile Financial,Electronics,Mobile,188.36
+15,Laptop Grow,Electronics,Laptop,50.6
+16,  LAPTOP YOUR  ,Electronics,Laptop,177.43
+17,Laptop But,Electronics,Laptop,183.47
+18,Laptop Suggest,Electronics,Laptop,17.33
+19,Laptop Must,Electronics,Laptop,182.33
+20,Laptop Even,Electronics,Laptop,84.62
+21,Laptop Under,Electronics,Laptop,189.52
+22,Camera Note,Electronics,Camera,101.06
+23,  CAMERA TAX  ,Electronics,Camera,178.02
+24,Camera Student,Electronics,Camera,93.46
+25,Camera Paper,Electronics,Camera,149.91
+26,Camera Enough,Electronics,Camera,86.73
+27,Camera Rule,Electronics,Camera,35.13
+28,Camera Level,Electronics,Camera,24.31
+29,Shirt Huge,Clothing,Shirt,84.58
+30,Shirt Order,Clothing,Shirt,11.38
+31,Shirt Member,Clothing,Shirt,91.46
+32,Shirt Speech,Clothing,Shirt,171.81
+33,  SHIRT EITHER  ,Clothing,Shirt,138.71
+34,Shirt Sometimes,Clothing,Shirt,195.68
+35,Shirt Group,Clothing,Shirt,82.64
+36,Pants Stand,Clothing,Pants,28.82
+37,Pants Low,Clothing,Pants,93.67
+38,Pants Responsibility,Clothing,Pants,130.13
+39,Pants Magazine,Clothing,Pants,9.16
+40,Pants Watch,Clothing,Pants,52.5
+41,Pants Peace,Clothing,Pants,115.09
+42,  PANTS TRAINING  ,Clothing,Pants,154.21
+43,Shoes Ahead,Clothing,Shoes,47.11
+44,Shoes Meet,Clothing,Shoes,69.07
+45,Shoes But,Clothing,Shoes,180.6
+46,  SHOES EVENING  ,Clothing,Shoes,172.39
+47,Shoes Author,Clothing,Shoes,30.35
+48,Shoes Idea,Clothing,Shoes,39.03
+49,Shoes Property,Clothing,Shoes,10.03
+50,  JACKET STORY  ,Clothing,Jacket,159.05
+51,Jacket Discussion,Clothing,Jacket,68.14
+52,Jacket Research,Clothing,Jacket,15.22
+53,Jacket Science,Clothing,Jacket,107.59
+54,Jacket Drug,Clothing,Jacket,97.87
+55,Jacket Such,Clothing,Jacket,105.08
+56,Jacket Four,Clothing,Jacket,103.25
+57,Furniture Itself,Home,Furniture,13.46
+58,Furniture Head,Home,Furniture,174.06
+59,Furniture Name,Home,Furniture,94.32
+60,Furniture North,Home,Furniture,16.86
+61,Furniture Act,Home,Furniture,83.32
+62,Furniture School,Home,Furniture,100.6
+63,Furniture There,Home,Furniture,19.33
+64,  KITCHEN EVERYONE  ,Home,Kitchen,123.62
+65,  KITCHEN ENERGY  ,Home,Kitchen,58.63
+66,Kitchen Field,Home,Kitchen,111.93
+67,Kitchen Better,Home,Kitchen,198.95
+68,Kitchen Inside,Home,Kitchen,93.47
+69,Kitchen Report,Home,Kitchen,24.34
+70,Kitchen Smile,Home,Kitchen,171.29
+71,Bedding Tend,Home,Bedding,154.95
+72,Bedding Guess,Home,Bedding,46.93
+73,Bedding Bag,Home,Bedding,49.56
+74,Bedding Once,Home,Bedding,93.43
+75,Bedding Word,Home,Bedding,23.54
+76,Bedding Could,Home,Bedding,134.7
+77,Bedding Maybe,Home,Bedding,34.76
+78,Decor Former,Home,Decor,18.09
+79,Decor Health,Home,Decor,23.18
+80,  DECOR DISCOVER  ,Home,Decor,149.07
+81,Decor Wall,Home,Decor,113.49
+82,Decor Painting,Home,Decor,114.51
+83,Decor Exist,Home,Decor,28.84
+84,Decor Cover,Home,Decor,134.74
+85,Fiction Your,Books,Fiction,174.28
+86,Fiction Skin,Books,Fiction,193.84
+87,Fiction Result,Books,Fiction,73.57
+88,Fiction Wonder,Books,Fiction,46.48
+89,Fiction Where,Books,Fiction,48.73
+90,Fiction Customer,Books,Fiction,169.85
+91,Fiction Moment,Books,Fiction,153.71
+92,Non‑Fiction Since,Books,Non‑Fiction,162.41
+93,Non‑Fiction Decision,Books,Non‑Fiction,195.04
+94,Non‑Fiction Easy,Books,Non‑Fiction,124.65
+95,Non‑Fiction Simply,Books,Non‑Fiction,10.12
+96,Non‑Fiction Effort,Books,Non‑Fiction,166.74
+97,Non‑Fiction Turn,Books,Non‑Fiction,40.18
+98,Non‑Fiction Evidence,Books,Non‑Fiction,65.25
+99,Science Design,Books,Science,6.19
+100,Science Drop,Books,Science,115.43
+101,Science Degree,Books,Science,32.67
+102,Science They,Books,Science,10.98
+103,Science Enjoy,Books,Science,46.95
+104,Science Think,Books,Science,71.47
+105,Science Present,Books,Science,145.71
+106,History Heart,Books,History,115.68
+107,  HISTORY CLEARLY  ,Books,History,15.26
+108,History Start,Books,History,125.48
+109,History Both,Books,History,58.06
+110,History Call,Books,History,99.7
+111,History Wife,Books,History,58.27
+112,History Bar,Books,History,27.19
