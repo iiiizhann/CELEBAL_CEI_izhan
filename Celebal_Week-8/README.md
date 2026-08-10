@@ -80,9 +80,9 @@ ecommerce-analytics-system/
 Clone the repository
 
 ```bash
-git clone https://github.com/nikhilkhot1014/ecommerce-analytics-system.git
+git clone https://github.com/iiiizhan/ecommerce-analytics-system.git
 
-cd ecommerce-analytics-system
+cd Celebal_Week-8
 ```
 
 Install dependencies
@@ -382,13 +382,10 @@ This project demonstrates:
 
 # 👨‍💻 Author
 
-**Nikhil Khot**
+**Izhan Shaikh**
 
-M.Sc. Computer Science  
+MCA 
 MIT World Peace University
 
 ---
 
-# 📜 License
-
-This project is developed for educational and learning purposes.
